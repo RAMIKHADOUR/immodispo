@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Installations{% endblock %}
+
+{% block body %}
+    <h1>Installations</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ installation.id }}</td>
+            </tr>
+            <tr>
+                <th>Internet</th>
+                <td>{{ installation.internet ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>Balcon</th>
+                <td>{{ installation.balcon ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>Garage</th>
+                <td>{{ installation.garage ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>Gym</th>
+                <td>{{ installation.gym ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>Piscine</th>
+                <td>{{ installation.piscine ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>Camera</th>
+                <td>{{ installation.camera ? 'Yes' : 'No' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_installations_index') }}">back to list</a>
+
+    <a href="{{ path('app_installations_edit', {'id': installation.id}) }}">edit</a>
+
+    {{ include('installations/_delete_form.html.twig') }}
+{% endblock %}

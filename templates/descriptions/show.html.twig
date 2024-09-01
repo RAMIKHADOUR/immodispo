@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Descriptions{% endblock %}
+
+{% block body %}
+    <h1>Descriptions</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ description.id }}</td>
+            </tr>
+            <tr>
+                <th>Surface</th>
+                <td>{{ description.surface }}</td>
+            </tr>
+            <tr>
+                <th>Chambres</th>
+                <td>{{ description.chambres }}</td>
+            </tr>
+            <tr>
+                <th>Salle_bains</th>
+                <td>{{ description.salleBains }}</td>
+            </tr>
+            <tr>
+                <th>Etages</th>
+                <td>{{ description.etages }}</td>
+            </tr>
+            <tr>
+                <th>Numero_etage</th>
+                <td>{{ description.numeroEtage }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_descriptions_index') }}">back to list</a>
+
+    <a href="{{ path('app_descriptions_edit', {'id': description.id}) }}">edit</a>
+
+    {{ include('descriptions/_delete_form.html.twig') }}
+{% endblock %}

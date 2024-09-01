@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Descriptions index{% endblock %}
+
+{% block body %}
+    <h1>Descriptions index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Surface</th>
+                <th>Chambres</th>
+                <th>Salle_bains</th>
+                <th>Etages</th>
+                <th>Numero_etage</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for description in descriptions %}
+            <tr>
+                <td>{{ description.id }}</td>
+                <td>{{ description.surface }}</td>
+                <td>{{ description.chambres }}</td>
+                <td>{{ description.salleBains }}</td>
+                <td>{{ description.etages }}</td>
+                <td>{{ description.numeroEtage }}</td>
+                <td>
+                    <a href="{{ path('app_descriptions_show', {'id': description.id}) }}">show</a>
+                    <a href="{{ path('app_descriptions_edit', {'id': description.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_descriptions_new') }}">Create new</a>
+{% endblock %}

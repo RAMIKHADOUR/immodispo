@@ -56,28 +56,28 @@
                 <span></span>
                 <span></span>
             </button>
-            <a class="navbar-brand text-brand" href="{{path('app_home')}}">Free<span class="color-b">Immo</span></a>
+            <a class="navbar-brand text-brand" href="">Free<span class="color-b">Immo</span></a>
 
             <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
                 <ul class="navbar-nav">
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-end" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                        <a class="nav-link dropdown-toggle text-end" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">Mon Compte</a>
                         <div class="dropdown-menu">
                             {% if app.user %}
-                            <a class="dropdown-item " href="{{path('app_login')}}">Mon Compte</a>
+                            <a class="dropdown-item " href="">Mon Compte</a>
                     
-                            <a class="dropdown-item " href="{{path('app_logout')}}">Me Déconnecter</a>
+                            <a class="dropdown-item " href="">Me Déconnecter</a>
                             {% else %}
-                            <a class="dropdown-item" href="{{path('app_register')}}">M'Inscrire</a>
-                            <a class="dropdown-item" href="{{path('app_login')}}">Me connecter</a>
+                            <a class="dropdown-item" href="">M'Inscrire</a>
+                            <a class="dropdown-item" href="">Me connecter</a>
                             {% endif %}
                     
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="text-decoration-none fw-bolder text-success nav-link" href="{{path('app_login')}}" role="button">Deposer Une Annonce</a>
+                        <a class="text-decoration-none fw-bolder text-success nav-link" href="" role="button">Deposer Une Annonce</a>
                     
                     </li>
                 </ul>
@@ -184,7 +184,7 @@
         {% for property in propertys %}
         <div class="col-sm-6 mb-3 mb-sm-0">
             <div class="card m-3">
-                <div class="m-2"><img style="width:100%;" src="{{ vich_uploader_asset(property, 'imageFile') }}" />
+                <div class="m-2"><img style="width:100%;" src="" />
                 </div>
                 <div class="m-2">
                     <p><strong> N° Référence : </strong> {{ (property.reference) }} </p>
@@ -244,11 +244,11 @@
         </div>
         <div class="text-center fw-bold">
             <p class="text-decoration-none text-dark">
-                <a href="{{path('app_home')}}" class=" text-decoration-none m-2">Accueil</a>
-                <a href="#!" class=" text-decoration-none m-2">A Propos</a>
-                <a href="{{path('app_login')}}" class=" text-decoration-none m-2">Acheter</a>
-                <a href="{{path('app_login')}}" class=" text-decoration-none m-2">Location</a>
-                <a href="{{path('app_contact')}}" class=" text-decoration-none m-3">Contact</a>
+                <a href="" class=" text-decoration-none m-2">Accueil</a>
+                <a href="" class=" text-decoration-none m-2">A Propos</a>
+                <a href="" class=" text-decoration-none m-2">Acheter</a>
+                <a href="" class=" text-decoration-none m-2">Location</a>
+                <a href="" class=" text-decoration-none m-3">Contact</a>
             </p>
            
         </div>

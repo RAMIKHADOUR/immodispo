@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Cordonnes index{% endblock %}
+
+{% block body %}
+    <h1>Cordonnes index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Civilite</th>
+                <th>Prenom_nom</th>
+                <th>Email</th>
+                <th>Tele_mobile</th>
+                <th>Tele_fixe</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for cordonne in cordonnes %}
+            <tr>
+                <td>{{ cordonne.id }}</td>
+                <td>{{ cordonne.civilite }}</td>
+                <td>{{ cordonne.prenomNom }}</td>
+                <td>{{ cordonne.email }}</td>
+                <td>{{ cordonne.teleMobile }}</td>
+                <td>{{ cordonne.teleFixe }}</td>
+                <td>
+                    <a href="{{ path('app_cordonnes_show', {'id': cordonne.id}) }}">show</a>
+                    <a href="{{ path('app_cordonnes_edit', {'id': cordonne.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_cordonnes_new') }}">Create new</a>
+{% endblock %}

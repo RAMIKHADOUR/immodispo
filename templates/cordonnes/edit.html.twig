@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Cordonnes{% endblock %}
+
+{% block body %}
+    <h1>Edit Cordonnes</h1>
+
+    {{ include('cordonnes/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_cordonnes_index') }}">back to list</a>
+
+    {{ include('cordonnes/_delete_form.html.twig') }}
+{% endblock %}
